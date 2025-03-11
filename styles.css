@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-/* Links */
 a, a:visited {
   text-decoration: none;
   color: inherit;
@@ -25,7 +24,6 @@ a:hover {
   color: inherit;
 }
 
-/* Common */
 aside, nav, footer, header, section, main {
   display: block;
 }
@@ -52,7 +50,6 @@ address {
   font-style: normal;
 }
 
-/* Form */
 input, textarea, button, select {
   font-family: inherit;
   font-size: inherit;
