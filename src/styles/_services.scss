@@ -1,0 +1,163 @@
+@use 'base/variables' as *;
+@use 'base/fonts';
+
+.services {
+    padding-top: 40px;
+
+    &__title {
+        font-family: 'NuberNextWide', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: uppercase;
+        letter-spacing: -0.32px;
+        position: relative;
+        z-index: -2;
+        padding-bottom: 80px;
+    }
+}
+
+.slider {
+    width: 100%;
+    overflow-y: visible !important;
+    overflow-x: clip !important;
+
+    &__wrapper {
+        display: flex; 
+        margin-bottom: 40px;
+    }
+
+    div.slider__wrapper {
+        height: auto;
+    }  
+
+    &__item {
+        position: relative;
+        height: auto;
+        z-index: 0;
+    }
+
+    &__number {
+        position: absolute;
+        top: -8%;
+        left: 0;
+        color: $brand-secondary-color;
+        font-family: 'NuberNextWide', sans-serif;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 56px;
+        z-index: -1;
+    }
+
+    &__body {
+        background-color: rgb(174, 174, 174, 0.08);
+        -webkit-backdrop-filter: blur(24px);
+        backdrop-filter: blur(24px); 
+        border-radius: 20px;
+        padding: 32px;
+        height: 468px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        padding-bottom: 16px;
+        padding-top: 32px;
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__image-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    &__image, &__arrow {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__button {
+        padding: 10px 12px;
+        border: 1px solid $brand-secondary-color;
+        border-radius: 50%;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    &__pagination {
+        display: none;
+    }
+}
+
+.swiper-button-disabled {
+    border: 1px solid rgb(255, 215, 34, 0.35);
+
+    svg > path {
+        fill: rgb(255, 215, 34, 0.35);
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .services {
+        padding-top: 100px;
+
+        &__title {
+            padding-bottom: 125px;
+            font-size: 44px;
+            line-height: 48px;
+        }
+    }
+
+    .slider {
+        &__number {
+            font-size: 64px;
+            line-height: 64px;
+        }
+
+        &__image-wrapper {
+            width: 100px;
+            height: 100px;;
+        }
+
+        &__body {
+            padding: 40px;
+        }
+
+        &__title {
+            padding-bottom: 24px;
+            font-size: 26px;
+        }
+
+        &__navigation {
+            position: absolute;
+            top: -165px;
+            right: 0;
+        } 
+
+        &__pagination {
+            display: block;
+            position: static !important;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: transparent;
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+            border: 1px solid $brand-secondary-color;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $brand-secondary-color;
+        }
+    }
+}

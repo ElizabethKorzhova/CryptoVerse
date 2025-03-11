@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'NuberNextWide';
+    src: url('../assets/fonts/NuberNext-BoldWide.otf') format('opentype'),
+         url('../assets/fonts/NuberNext-BoldWide.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NuberNextWide';
+    src: url('../assets/fonts/NuberNext-RegularWide.otf') format('opentype'),
+         url('../assets/fonts/NuberNext-RegularWide.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont.ttf') format('truetype');
+    font-display: swap;
+}

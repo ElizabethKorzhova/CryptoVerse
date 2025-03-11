@@ -1,0 +1,42 @@
+@use 'base/reset';
+@use 'base/variables' as *;
+@use 'header';
+@use 'intro';
+@use 'services';
+@use 'meeting';
+@use 'footer';
+@use 'base/fonts';
+
+body {
+    background-color: $brand-primary-color;
+    color: $text-primiry-color;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+main, .header, .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (min-width: $tablet-width) {
+    main, .header, .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    main, .header, .footer {
+        padding-left: 112px;
+        padding-right: 112px;
+    }
+}

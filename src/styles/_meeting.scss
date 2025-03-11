@@ -1,0 +1,63 @@
+@use 'base/variables' as *;
+@use 'base/fonts';
+
+.meeting {
+    padding-top: 80px;
+
+    &__title {
+        font-family: 'NuberNextWide', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: uppercase;
+        letter-spacing: -0.32px;
+    }
+
+    &__description {
+        color: $text-secondary-color;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__calendar {
+        border: 1px solid $brand-secondary-color; 
+        border-radius: 24px;
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .meeting {
+        padding-top: 120px;
+
+        &__calendar {
+            max-width: 488px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .meeting {
+        display: flex;
+        align-items: center;
+        gap: 128px;
+        padding-top: 200px;
+    
+        &__title {
+            font-size: 44px;
+            line-height: 58px;
+        }
+
+        &__description {
+            padding-bottom: 0;
+            width: 92%
+        }
+
+        &__calendar {
+            padding: 40px 84px;
+        }
+    }
+}
